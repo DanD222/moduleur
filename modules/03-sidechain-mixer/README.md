@@ -86,7 +86,7 @@ This option makes a fix gain for INPUT 4, so you won't be able to amplify line l
 
 **Sidechain compressor attack and release times**
 
-The current version of this module allows you to only set a fixed attack and release time for the compressor. Use the RV_ATTACK1 and RV_RELEASE1 trimmers to set these times.
+The current version of this module allows you to only set a fixed attack and release time for the compressor. Use the RV_ATTACK1 and RV_RELEASE1 trimmers to set these times. These trimmers are the actual charging and discharging resistors for the peak detector's cap. Choose a smaller value trimmer (around 10k) if you're okay with short times (~0.1s max) with more precision, or a larger (50k-100k) if you want to experiment with longer times but with less precision. (Hence the 10k-100k value designator in the schematics.)
 
 **VCA bias**
 
