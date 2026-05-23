@@ -7013,7 +7013,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Shmoergh_Custom_Footprints:SOT-363_SC-70-6"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-363_SC-70-6"
 			(at 172.72 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -11848,7 +11848,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Shmoergh_Custom_Footprints:SOT-363_SC-70-6"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-363_SC-70-6"
 			(at 172.72 72.39 0)
 			(hide yes)
 			(show_name no)
