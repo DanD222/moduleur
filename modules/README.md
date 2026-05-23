@@ -1,76 +1,23 @@
-# Shmøergh Moduleur
+# BEFORE YOU BUILD
 
-A fully analog, DIY-friendly modular synthesizer system derived from the original [Shmøergh Hog](https://www.shmoergh.com/hog). The instrument is built from discrete modules — oscillators, filters, VCAs, utilities, and a digital Brain — usable either in their default pre-patched configuration or in any Eurorack system.
+👉 Make sure you read the full [build guide](https://github.com/shmoergh/moduleur/wiki) thoroughly before you start building the Moduleur.
 
-The project targets builders who want a reproducible, open, and hackable analog instrument. All circuits, PCBs, firmware, and mechanical designs are published here, including schematics, Gerbers, BOMs, and panel files. Each module is self-contained and can be assembled or modified independently.
+# BOM
 
-Moduleur follows standard Eurorack conventions (±12 V rails, reverse polarity protection, 10-pin power, 1 V/oct where applicable). Designs emphasize robustness, available components, and clear signal flow. Simulation files and test notes are included for further study or modification.
+Each module has a dedicated BOM. We also created a full BOM if you want to order all modules at once:
 
-This repository reflects ongoing hardware and firmware development, and module revisions may change over time.
+- [Full BOM](https://docs.google.com/spreadsheets/d/1Qo4ZxYgp-tBQ1XDLqPfu5fhcQhO-8mitsnlWUWIVU-8/edit?usp=sharing) — Contains only the BOM for the modules. For the enclosure, check the [enclosure BOM](https://github.com/shmoergh/moduleur/blob/main/enclosure/enclosure-bom.csv).
+- [Mouser cart](https://www.mouser.com/Tools/SavedCart/Share?AccessID=7d2d54395b) — Last update: 24 Jan 2026
 
-Follow progress at [shmoergh.com](https://www.shmoergh.com/moduleur/)
+---
 
-![moduleur-bp](https://github.com/user-attachments/assets/bd80d225-350d-44ae-b68d-8cad4bbadadd#gh-light-mode-only)
-![moduleur-bp](https://github.com/user-attachments/assets/a9fdfeb7-7ad8-4782-806b-18bf5c98be53#gh-dark-mode-only)
+### Recommended build order
 
-## Community
-
-Join the [Shmøergh Discord server](https://discord.gg/CAynJwSkaW).
-
-## Building
-
-[Read the build guide &rarr;](https://github.com/shmoergh/moduleur/wiki)
-
-## Modules
-
-- [Power supply](https://github.com/shmoergh/moduleur/tree/main/modules/01-psu)
-- [VCO](https://github.com/shmoergh/moduleur/tree/main/modules/02-vco)
-- [Mixer + sidechain compressor](https://github.com/shmoergh/moduleur/tree/main/modules/03-sidechain-mixer)
-- [VCF](https://github.com/shmoergh/moduleur/tree/main/modules/04-vcf)
-- [ADSR & VCA](https://github.com/shmoergh/moduleur/tree/main/modules/05-adsr-vca)
-- [Analog Bitcrusher / S&H + LFO + Output](https://github.com/shmoergh/moduleur/tree/main/modules/06-utils-output)
-- [Brain](https://github.com/shmoergh/moduleur/tree/main/modules/07-brain)
-- [Default patch](https://github.com/shmoergh/moduleur/tree/main/modules/08-default-patch)
-
-
-## Enclosure
-
-- [Moduleur enclosure by Shmøergh](https://github.com/shmoergh/moduleur/tree/main/enclosure)
-- [Eurorack frame](https://github.com/shmoergh/moduleur/tree/main/eurorack/frame)
-- [Eurorack faceplates](https://github.com/shmoergh/moduleur/tree/main/eurorack/faceplates)
-
-## Roadmap
-
-We're working on improving modules, and adding firmwares to Brain as we go. You can see our loosely held ideas in the [Roadmap](./ROADMAP.md) file.
-
-## Contribution & Bug Reports
-
-Contributions are much appreciated, especially in areas where community experience can improve the reliability and longevity of the system.
-
-[Contributing guidelines](./CONTRIBUTING.md)
-
-## License
-
-Shmøergh Hog Moduleur © 2025
-
-Hardware is licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/)
-
-Software is licensed under [MIT](https://opensource.org/license/mit).
-
-Font used on PCBs: https://departuremono.com
-
-Simulations made in [CircuitJS](https://www.falstad.com/circuit/circuitjs.html)
-
-## ⚠️ Build Smart
-
-Moduleur is an open-source DIY electronics project intended for experienced builders.
-
-Although it operates from low-voltage DC power, incorrect assembly, wiring, or component selection can result in equipment damage or safety risks.
-
-By building this project, you accept full responsibility for safe assembly and operation.
-
-Please read the full safety notice and disclaimer before proceeding:
-
-👉 [Safety & Intended Use](SAFETY.md)
-
-👉 [Full Disclaimer](DISCLAIMER.md)
+1. [PSU](https://github.com/shmoergh/moduleur/tree/main/modules/01-psu)
+2. [VCO](https://github.com/shmoergh/moduleur/tree/main/modules/02-vco)
+3. [Mixer & sidechain compressor](https://github.com/shmoergh/moduleur/tree/main/modules/03-sidechain-mixer)
+4. [VCF](https://github.com/shmoergh/moduleur/tree/main/modules/04-vcf)
+5. [ADSR & VCA](https://github.com/shmoergh/moduleur/tree/main/modules/05-adsr-vca)
+6. [Utils + Output](https://github.com/shmoergh/moduleur/tree/main/modules/06-utils-output)
+7. [Brain](https://github.com/shmoergh/moduleur/tree/main/modules/07-brain)
+8. [Default Patch](https://github.com/shmoergh/moduleur/tree/main/modules/08-default-patch)
