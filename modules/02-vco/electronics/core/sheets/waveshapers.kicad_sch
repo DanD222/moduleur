@@ -7,7 +7,7 @@
 	(title_block
 		(title "Moduleur VCO core")
 		(date "2026-05-24")
-		(rev "3")
+		(rev "4")
 		(company "Shmøergh")
 	)
 	(lib_symbols

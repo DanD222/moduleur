@@ -5,10 +5,10 @@ If you are building from anything other than the latest revision in this reposit
 
 ## 🐛 May 24, 2026 FIX
 
-**If you ordered the Core board before May 24 2026 you need to apply the following fix manually.** The bug is fixed on the Core boards on May 24, 2026.
+**If you ordered the Core board before May 24 2026 you need to apply the following fix manually.** The fix is being verified on the Core boards onwards May 24, 2026.
 
 #### Affected boards
-VCO Core boards, Rev 2 and earlier
+VCO Core boards, Rev 3 and earlier
 
 #### Sympthoms
 - 1V/oct tracking doesn't work.
@@ -18,16 +18,16 @@ VCO Core boards, Rev 2 and earlier
 - TP1 floats at ~1V instead of being servoed to 0V
 - U1B output pinned at −10.3V (TL072 negative rail)
 
-#### Assumed reason
+#### Reason
 
-The R+O datasheet only characterizes hFE at IC = −10 mA and above, with no minimum specified at low collector currents. The circuit operates Q2 at sub-milliamp currents, where the substituted part has insufficient gain to close the reference current loop that charges the oscillator's cap. U1B saturates against the negative supply rail trying to compensate, leaving Q2's collector current stuck at a fixed (too-low) value regardless of CV input.
+For Q2, pin numbering was incorrectly following 2N3906 (TO-92, EBC) instead of MMBT3906 (SOT-23, BEC). Previous production used the SMD MMBT3906 with traces routed to the wrong pads, leaving the transistor operating in reverse-active mode. This barely worked with some manufacturer's parts and failed entirely with others, producing a uniform pitch ceiling at ~70 Hz across all affected units.
 
 #### Fix faulty boards
 
-**TESTED HACK** — Desolder Q2 (SMD component) and hack a 2N3906 on the SDM pads. Be careful to match the emitter/base/collector pins of the 2N3906 properly to the pads of Q2.
+**TESTED THT HACK** — Desolder Q2 (SMD component) and hack a 2N3906 on the SDM pads. Make sure to match the emitter/base/collector pins of the 2N3906 properly to the pads of Q2.
 
-**⚠️ UNTESTED PROPER FIX** — Replace Q2 with ONSEMI version of the same component: MMBT3906LT1G, https://mou.sr/43pMpYO, Mouser Part No: 863-MMBT3906LT1G
+**⚠️ UNTESTED SMD HACK** — Desolder Q2 and resolder in a "deadbug" position so that the actual pins match the footprint.
 
-#### Solution
+#### Board fix
 
-**⚠️ UNTESTED** — The previous BOM specified the generic LCSC part C7420354, which JLCPCB assumed to silently substituted between production batches: batch 1 (Jan 2026) received a working part, while batches 2 and 3 received Zhuhai Hongjiacheng (R+O) MMBT3906 parts under the same C-code. This fairly noname component is replaced with ONSEMI / MMBT3906LT1G (C53444). The production files in the (production)[./production/] folder are updated to use the new component, however the boards are not yet tested (verification is in progress).
+**⚠️ UNTESTED** — The board was fixed on May 24, 2026 but verification is in progress.
