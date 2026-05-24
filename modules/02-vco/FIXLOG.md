@@ -24,9 +24,13 @@ For Q2, pin numbering was incorrectly following 2N3906 (TO-92, EBC) instead of M
 
 #### Fix faulty boards
 
-**TESTED THT HACK** — Desolder Q2 (SMD component) and hack a 2N3906 on the SDM pads. Make sure to match the emitter/base/collector pins of the 2N3906 properly to the pads of Q2.
+**OPTION 1 (RECOMMENDED)** — Desolder Q2 and rotate 180 deg and solder the collector pin (#3) to TP2 (Hi-Frequency test point, which is apparently the collector of Q2), with a short piece of wire. **⚠️ UNTESTED**, but pretty sure it works.
 
-**⚠️ UNTESTED SMD HACK** — Desolder Q2 and resolder in a "deadbug" position so that the actual pins match the footprint.
+**OPTION 2** — Desolder Q2 (SMD) and solder a 2N3906 THT component to the SMD pads (they're handsolder pads, so it's not hard to do). TESTED, works
+
+**OPTION 3** — Desolder Q2 and solder it back in a deadbug position (upside down). **⚠️ UNTESTED**, probably not too convenient
+
+For the SMD options you might want to buy a few MMBT3906 if the legs accidentally break during desoldering: https://mou.sr/43pMpYO / Mouser Part no: 863-MMBT3906LT1G
 
 #### Board fix
 
