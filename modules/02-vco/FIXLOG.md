@@ -3,7 +3,7 @@
 This document tracks known issues found in specific PCB revisions and how to correct them.
 If you are building from anything other than the latest revision in this repository, review this file before starting your build.
 
-## 🐛 Feb 22, 2026 FIX
+## 🐛 May 24, 2026 FIX
 
 **If you ordered the Core board before May 24 2026 you need to apply the following fix manually.** The bug is fixed on the Core boards on May 24, 2026.
 
@@ -26,8 +26,8 @@ The R+O datasheet only characterizes hFE at IC = −10 mA and above, with no min
 
 **TESTED HACK** — Desolder Q2 (SMD component) and hack a 2N3906 on the SDM pads. Be careful to match the emitter/base/collector pins of the 2N3906 properly to the pads of Q2.
 
-**UNTESTED PROPER FIX** — Replace Q2 with ONSEMI version of the same component: MMBT3906LT1G, https://mou.sr/43pMpYO, Mouser Part No: 863-MMBT3906LT1G
+**⚠️ UNTESTED PROPER FIX** — Replace Q2 with ONSEMI version of the same component: MMBT3906LT1G, https://mou.sr/43pMpYO, Mouser Part No: 863-MMBT3906LT1G
 
 #### Solution
 
-**UNTESTED** — The previous BOM specified the generic LCSC part C7420354, which JLCPCB assumed to silently substituted between production batches: batch 1 (Jan 2026) received a working part, while batches 2 and 3 received Zhuhai Hongjiacheng (R+O) MMBT3906 parts under the same C-code.
+**⚠️ UNTESTED** — The previous BOM specified the generic LCSC part C7420354, which JLCPCB assumed to silently substituted between production batches: batch 1 (Jan 2026) received a working part, while batches 2 and 3 received Zhuhai Hongjiacheng (R+O) MMBT3906 parts under the same C-code. This fairly noname component is replaced with ONSEMI / MMBT3906LT1G (C53444). The production files in the (production)[./production/] folder are updated to use the new component, however the boards are not yet tested (verification is in progress).
