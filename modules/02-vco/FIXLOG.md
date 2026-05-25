@@ -26,13 +26,14 @@ For Q2, pin numbering was incorrectly following 2N3906 (TO-92, EBC) instead of M
 
 **OPTION 1** — Desolder Q2 and rotate 180 deg and solder the collector pin (#3) to TP2 (Hi-Frequency test point, which is apparently the collector of Q2), with a short piece of wire. For this fix you might want to buy a few MMBT3906 if the legs of the original accidentally break during desoldering: https://mou.sr/43pMpYO / Mouser Part no: 863-MMBT3906LT1G. TESTED, works.
 
-<img width="1753" height="1361" alt="q2fix-option1" src="https://github.com/user-attachments/assets/16b9a06b-19c6-4e22-987e-bdd0ff3c4c80" />
+<img width="1753" height="1361" alt="q2fix-option1" src="https://github.com/user-attachments/assets/a276a65d-875f-4533-b705-0ef0cd4f6cd3" />
+
 
 ---
 
-**OPTION 2** — Desolder Q2 (SMD) and solder a 2N3906 THT component to the SMD pads (they're handsolder pads, so it's not hard to do). TESTED, works
+**OPTION 2** — Desolder Q2 (SMD) and solder a 2N3906 THT component to the SMD pads and the Hi-Freq test point. TESTED, works
 
-<img width="1753" height="686" alt="q2fix-option2" src="https://github.com/user-attachments/assets/a9052cef-2e47-44c7-9358-dae9c1ec6732" />
+<img width="1753" height="1375" alt="q2fix-option2" src="https://github.com/user-attachments/assets/23350349-0c3a-4167-87a6-543c61b5847c" />
 
 Both works the same, there's no preferred way so just do which seems easier and better for you.
 
